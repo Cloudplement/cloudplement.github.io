@@ -1,0 +1,34 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+// Breakpoints
+// -------------------------
+
+$large-screen:  new-breakpoint(max-width em(1200px));
+$medium-screen: new-breakpoint(max-width em(992px));
+$small-screen:  new-breakpoint(max-width em(768px));
+
+
+// Fonts
+// -------------------------
+
+$font-sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$font-serif: 'Lora', 'Times New Roman', Times, serif;
+$font-color: #444;
+$font-weight: 100;
+$font-family-base: $font-serif;
+$font-size-base: modular-scale(0);
+
+
+// Line Height
+// -------------------------
+
+$line-height-base: modular-scale(1);
+
+
+// Spacing
+// -------------------------
+
+$spacing-base: $line-height-base * $font-size-base;

@@ -1,0 +1,168 @@
+//
+// Modules
+// --------------------------------------------------
+
+
+// Header
+// -------------------------
+
+header {
+  @include outer-container(em(790));
+
+  @include media($medium-screen) {
+    @include outer-container(em(600));
+  }
+
+  @include media($small-screen) {
+    @include outer-container;
+  }
+
+  .logo {
+    @include media($medium-screen) {
+      padding-top: modular-scale(3);
+    }
+
+    @include media($small-screen) {
+      padding-top: modular-scale(0);
+    }
+
+    padding-top: modular-scale(6);
+
+    img {
+      max-width: modular-scale(8);
+      max-height: modular-scale(8);
+
+      @include media($medium-screen) {
+        max-width: modular-scale(6);
+        max-height: modular-scale(6);
+      }
+
+      @include media($small-screen) {
+        max-width: modular-scale(4);
+        max-height: modular-scale(4);
+      }
+    }
+  }
+}
+
+
+// Home
+// -------------------------
+
+.home-intro {
+  @include outer-container(em(790));
+
+  @include media($medium-screen) {
+    @include outer-container(em(600));
+
+    padding-top: modular-scale(3);
+    padding-bottom: modular-scale(3);
+  }
+
+  @include media($small-screen) {
+    @include outer-container;
+
+    padding-top: modular-scale(0);
+    padding-bottom: modular-scale(0);
+  }
+
+  padding-top: modular-scale(6);
+  padding-bottom: modular-scale(6);
+}
+
+
+// Contact
+// -------------------------
+
+.contact {
+  background-color: #0082CE;
+  margin-bottom: 0;
+  padding-top: modular-scale(6);
+  padding-bottom: modular-scale(6);
+
+  @include media($medium-screen) {
+    padding-top: modular-scale(3);
+    padding-bottom: modular-scale(3);
+  }
+}
+
+.contact-form {
+  @include outer-container(em(790));
+
+  @include media($medium-screen) {
+    @include outer-container(em(600));
+  }
+
+  @include media($small-screen) {
+    @include outer-container;
+  }
+
+  text-align: center;
+  margin: 0 auto;
+  p {
+    color: white;
+    margin-bottom: modular-scale(0);
+  }
+
+  input,
+  textarea {
+    background-color: transparent;
+    border: modular-scale(-5) solid white;
+    color: white;
+    display: block;
+    font-family: $font-sans-serif;
+    font-size: modular-scale(1);
+
+    @include media($medium-screen and $small-screen) {
+      font-size: modular-scale(0);
+    }
+
+    margin: 0;
+    margin-bottom: modular-scale(-1);
+    padding: modular-scale(0) modular-scale(0);
+    text-decoration: none;
+    width: 100%;
+
+    &:hover,
+    &:focus {
+      color: white;
+      border-color: $font-color;
+      outline: none;
+    }
+
+    @include placeholder {
+      color: white;
+    }
+  }
+
+  textarea {
+    height: modular-scale(8);
+  }
+
+  button {
+    background-color: transparent;
+    border: modular-scale(-5) solid white;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-family: $font-sans-serif;
+    font-size: modular-scale(1);
+
+    @include media($medium-screen and $small-screen) {
+      font-size: modular-scale(0);
+    }
+
+    line-height: modular-scale(0);
+    margin: 0;
+    padding: modular-scale(0) modular-scale(0);
+    text-transform: uppercase;
+    width: 100%;
+
+    &:hover,
+    &:focus {
+      color: $font-color;
+      border-color: $font-color;
+      outline: none;
+    }
+  }
+}

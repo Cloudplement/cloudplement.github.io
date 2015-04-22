@@ -1,0 +1,84 @@
+//
+// Base
+// --------------------------------------------------
+
+
+body {
+  background-color: white;
+  color: $font-color;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight;
+  line-height: $line-height-base;
+}
+
+header,
+section,
+footer {
+  margin-top: modular-scale(3);
+  margin-bottom: modular-scale(3);
+  padding-left: modular-scale(0);
+  padding-right: modular-scale(0);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-sans-serif;
+}
+
+h1 {
+  font-size: modular-scale(4);
+
+  @include media($medium-screen) {
+    font-size: modular-scale(3);
+  }
+
+  @include media($small-screen) {
+    font-size: modular-scale(2);
+  }
+
+  line-height: modular-scale(2);
+
+  & + p, & + blockquote, & + pre,
+  & + dl, & + ol, & + ul {
+    margin-top: modular-scale(2);
+  }
+}
+
+p {
+  font-size: modular-scale(2);
+
+  @include media($medium-screen) {
+    font-size: modular-scale(2);
+  }
+
+  @include media($small-screen) {
+    font-size: modular-scale(1);
+  }
+
+  line-height: modular-scale(1);
+
+  & + p, & + blockquote, & + pre,
+  & + dl, & + ol, & + ul {
+    margin-top: modular-scale(1);
+  }
+}
+
+a {
+  color: inherit;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+input,
+textarea {
+  @include border-top-radius(0);
+  @include border-right-radius(0);
+  @include border-bottom-radius(0);
+  @include border-left-radius(0)
+}
